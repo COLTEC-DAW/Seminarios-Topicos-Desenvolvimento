@@ -7,7 +7,7 @@
 O Vue.js (pronuncia-se da mesma forma que "view", em inglês) é um framework JavaScript criado pelo desenvolvedor Evan You que, enquanto trabalhava na Google, precisava de um framework para trabalhar com JavaScript que fosse bom como o Angular e ao mesmo tempo bem mais leve e prático.
 
 <p align="center">
-  <img src="imgs/EvanYou" height="100" width="100"/>
+  <img src="/imgs/EvanYou.jfif"/>
   <p align="center">Evan You, criador do Vue.js</p>
 </p>
 
