@@ -21,7 +21,7 @@ Para verificar se o Node foi instalado, basta executar o seguinte comando no pro
 $ node -v
 Então, deve-se executar o comando abaixo para instalar a Angular CLI, que é ..
 
-$ npm install @angular/cli
+$ npm install -g @angular/cli
 Para verificar a instalação, pode-se digitar o comando para saber a versão atual da CLI:
 
 $ ng version
