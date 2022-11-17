@@ -31,7 +31,7 @@ Para verificar se o Node foi instalado, basta executar o seguinte comando no pro
 `$ node -v`
 
 Então, deve-se executar o comando abaixo para instalar a Angular CLI, que é:
-`$ npm install @angular/cli`
+`$ npm install -g @angular/cli`
 
 Para verificar a instalação, pode-se digitar o comando para saber a versão atual da CLI:
 `$ ng version`
@@ -68,9 +68,12 @@ help: lista os comandos disponíveis e suas descrições breves.
 
 # Getting Started
 
-Para gerar um projeto Angular, utiliza-se a Angular CLI executando o seguinte comando, no qual “project” é o nome do projeto.
+Para gerar um projeto Angular, utiliza-se a Angular CLI executando o seguinte comando, no qual “project” é o nome do projeto. 
 
 `$ ng new project`
+
+Obs: É necessário estar na pasta desejada antes de criar um novo projeto, como no exemplo, no qual username é o nome de usuário e angularprojects é o nome da pasta que o novo arquivo será criado.
+`$ cd C/Users/username/Documents/angularprojects`
 
 A CLI irá perguntar se o usuário deseja adicionar o roteamento do Angular e a resposta padrão é não. Também será perguntado o formato do stylesheet, e é recomendado utilizar o CSS. Após escolher as opções, deve-se apertar Enter para continuar.
 
