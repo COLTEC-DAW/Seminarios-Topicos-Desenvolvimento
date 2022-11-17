@@ -8,7 +8,7 @@
 
 Sua finalidade é nos dar ferramentas necessárias para criação de aplicações SPA, além disso também deixa o desenvolvimento deste tipo de aplicação mais simples e otimizado. Com ele, podemos desenvolver aplicações web voltadas tanto para resoluções desktop quanto para resoluções mobile, tornando-as dinâmicas, modernas e escaláveis.
 
-### Características
+## Características
 Suas principais características são:
 
 • **Suporte cross-platform:** esse framework fornece suporte a múltiplas plataformas de desenvolvimento. O Angular pode ser utilizado para criar aplicações web SPA, aplicações mobile (com o suporte do Ionic, por exemplo) ou até mesmo aplicações desktop (com o suporte do Electron).
