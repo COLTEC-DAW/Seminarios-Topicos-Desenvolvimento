@@ -47,7 +47,7 @@ https://win.rustup.rs/
 
 Para criar um novo package usamos o comando `cargo new <nome>`
 
-Um arquivo Cargo.toml será criado, basicamente existe um arquivo deste por package, no qual será declarado informações do package. Além disso, existe uma seção de dependências do package, as quais podem ser arquivos/crates. Por padrão, serão procuradas no site crates.io.
+Um arquivo Cargo.toml será criado, basicamente existe um arquivo deste por package, no qual será declarado informações do package. Além disso, existe uma seção de dependências do package, as quais podem ser arquivos/crates. Por padrão, serão procuradas no site crates.io (https://crates.io/).
 
 Para efeito de ilustração usaremos o framework Rocket
 
