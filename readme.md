@@ -109,4 +109,5 @@ Depois, é só entrar no endereço http://localhost:4200/ no navegador. A págin
 Essa popular biblioteca de javascript foi lançada em 2013 e mantida pelo Facebook. Originalmente foi criado para construir UI. Hoje em dia, tem um papel essencial no ecossistema de front-end. Um programador de React pode construir sites funcionais, user friendly, e atrativos muito mais rápido que em qualquer outro framework.
 
 <span style="font-size: 20px; font-weight: 500">Vue</span> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png" alt="drawing" width="40"/>
+
 Vue é uma das bibliotecas de javascript mais usadas, e foi criada em 2013. Tem milhões de usuários por conta de sua eficiência em criar UIs e aplicações de uma página. Algo interessante do Vue é que não é inteiramente um framework, o que o torna facilmente adaptável a outros projetos.
