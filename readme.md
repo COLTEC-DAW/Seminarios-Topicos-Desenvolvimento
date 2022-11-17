@@ -1,7 +1,8 @@
+# ANGULAR
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/90px-Angular_full_color_logo.svg.png" alt="angular" width="60"/> <span style="font-size: 20px; font-weight: 600">Angular<span>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/90px-Angular_full_color_logo.svg.png" alt="angular" width="60"/>
 
-#Introdução
+# Introdução
 
 É um framework JavaScript de código aberto mantido pela Google para a construção de SPA (sigla para *Single Page Applications* ou Aplicações de Página Única). Resumidamente, uma SPA é basicamente uma aplicação web construída em uma só página, na qual a interação e a navegação entre as sessões de uma página ocorrem de maneira a qual não é necessário recarregar a página em cada uma dessas mudanças.
 
@@ -10,11 +11,11 @@ Sua finalidade é nos dar ferramentas necessárias para criação de aplicaçõe
 ### Características
 Suas principais características são:
 
-• **Suporte cross-platform: **esse framework fornece suporte a múltiplas plataformas de desenvolvimento. O Angular pode ser utilizado para criar aplicações web SPA, aplicações mobile (com o suporte do Ionic, por exemplo) ou até mesmo aplicações desktop (com o suporte do Electron).
+• **Suporte cross-platform:** esse framework fornece suporte a múltiplas plataformas de desenvolvimento. O Angular pode ser utilizado para criar aplicações web SPA, aplicações mobile (com o suporte do Ionic, por exemplo) ou até mesmo aplicações desktop (com o suporte do Electron).
 
 Mesmo em ambientes distintos, a API do Angular permanece praticamente a mesma, o que facilita a curvatura de adoção e aprendizagem em múltiplos ambientes de desenvolvimento;
 
-• **Integração e suporte à todas as fases de desenvolvimento: **provê ferramentas e suporte para todas as fases de desenvolvimento, desde a escrita do código em si (apoiando-se bastante na API e no sistema de tipos do TypeScript) até a criação de fluxos de teste (com o apoio principalmente do Karma – uma biblioteca para escrita de testes JavaScript), passando pelo suporte excelente à criação de animações, o provisionamento de estruturas de acessibilidade e até mesmo o scaffolding de projetos através do Angular CLI;
+• **Integração e suporte à todas as fases de desenvolvimento:** provê ferramentas e suporte para todas as fases de desenvolvimento, desde a escrita do código em si (apoiando-se bastante na API e no sistema de tipos do TypeScript) até a criação de fluxos de teste (com o apoio principalmente do Karma – uma biblioteca para escrita de testes JavaScript), passando pelo suporte excelente à criação de animações, o provisionamento de estruturas de acessibilidade e até mesmo o scaffolding de projetos através do Angular CLI;
 
 • **Produtividade aliada à performance:** consegue oferecer suporte ao desenvolvimento rápido de aplicações através de uma API simples, bem estruturada e bem documentada, o que acaba trazendo bastante produtividade.
 
@@ -36,7 +37,7 @@ Para verificar a instalação, pode-se digitar o comando para saber a versão at
 `$ ng version`
 
 Os comandos oferecidos pela CLI são (ênfase no comando help):
-`add `adiciona suporte a uma biblioteca externa em seu projeto.
+`add` adiciona suporte a uma biblioteca externa em seu projeto.
 
 `build (b)` compila uma aplicação do Angular em seu diretório de saída, chamado dist/ no caminho de saída fornecido. Este comando deve ser executado dentro de um diretório de espaço de trabalho.
 
@@ -65,7 +66,7 @@ help: lista os comandos disponíveis e suas descrições breves.
 
 `xi18n`extrai as mensagens i18n do código-fonte.
 
-#Getting Started
+# Getting Started
 
 Para gerar um projeto Angular, utiliza-se a Angular CLI executando o seguinte comando, no qual “project” é o nome do projeto.
 
@@ -104,7 +105,7 @@ A Angular CLI fornece um conjunto de ferramentas completas para desenvolver apli
 Depois, é só entrar no endereço http://localhost:4200/ no navegador. A página é recarregada automaticamente após qualquer mudança no código.
 
 # Ferramentas similares
-<span style="font-size: 20px; font-weight: 500">React</span> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc2Y2gmQB5zuaBd1AfN_AyEgoTgxPF65i7GwlvrbnnP_RUlubieG19WFnonCtS4ZfAox4&usqp=CAU=10xHEIGHT" alt="drawing" width="40"/>
+<span style="font-size: 20px; font-weight: 500">React</span> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png" alt="drawing" width="40"/>
 
 Essa popular biblioteca de javascript foi lançada em 2013 e mantida pelo Facebook. Originalmente foi criado para construir UI. Hoje em dia, tem um papel essencial no ecossistema de front-end. Um programador de React pode construir sites funcionais, user friendly, e atrativos muito mais rápido que em qualquer outro framework.
 
