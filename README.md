@@ -2,10 +2,14 @@
     <strong>DOCKER, Ambiente Virtual de Desenvolvimento</strong>
 </h1>
 
+</br>
+
 <div align="center">
     <img width="300px" src="imgs/logo_docker.png">
 </div>
 </br>
+
+Link Slide: `https://www.canva.com/design/DAFRiwVuVyM/KG9EojYOpGzh9KVSXyFKhQ/edit`
 
 <h1 align="center">
   Introdução
