@@ -11,28 +11,39 @@
   <h2>Por que usar Vue?</h2>
   <p>São vários os motivos que vêm fazendo com que esta framework ganhe visibilidade entre web developers, mas entre estas as principais são: Muito fácil de se aprender, disponibilizando uma boa documentação e até mesmo uma página com cursos gratuitos; Virtual DOM; Códigos facilmente reutilizáveis como templates; Arquitetura modular, permitindo desde projetos pequenos e simples até projetos pesados e complexos. Permitindo também a criação de bibliotecas com diversas funções;
   </p>
+  <p>O Vue.js funciona na lógica de vincular os dados que recebe com um DOM virtual. compila o código e o renderiza internamente, antes de atualizar a interface, gerando assim mais otimização. O Vue é reativo, isto é, sua interface se altera em resposta às mudanças dos dados a ela relacionada. Cada componente ("peça") dentro do vue controla suas próprias dependências reativas na sua renderização, de forma que o sistema saiba exatamente quando e quais componentes renderizar ou re-renderizar.
+  </p>
   
 <h1 align="center">Instalação & Configuração</h1>
   <h2>Instalação via unpkg</h2>
-  <p>Basta adicionar a seguinte linha de código, seja no head ou no body dos arquivos html em que a framework for ser utilizada</p>
+  <p>Basta adicionar a seguinte linha de código, seja no head ou no body dos arquivos html em que a framework for ser utilizada.</p>
   ```html <script src="https://upnkg.com/vue@3/dist/vue.global.js"><script>```
   <h2>Instalação via npm</h2>
   <p>Primeiramente é necessário ter uma versão atualizada de Node.JS instalada e então deverá se inserir alguns comandos no terminal</p>
   <p>Este comando instalará e executará a ferramenta oficial de criação da base do projeto Vue e em seguida mostrará algumas opções de personalização do projeto</p>
-<h1 align="center">Getting Started</h1>
-  <p></p>
   
-<h1 align="center">Ferramentas similares</h1>
+<h1 align="center">Getting Started</h1>
+  <h2>Começando um projeto em Vue</h2>
   <p></p>
-
-O Vue.js funciona na lógica de vincular os dados que recebe com um DOM virtual. compila o código e o renderiza internamente, antes de atualizar a interface, gerando assim mais otimização. O Vue é reativo, isto é, sua interface se altera em resposta às mudanças dos dados a ela relacionada. Cada componente ("peça") dentro do vue controla suas próprias dependências reativas na sua renderização, de forma que o sistema saiba exatamente quando e quais componentes renderizar ou re-renderizar.
-
-A instalação do VueJs pode ser feita tanto via unpkg de maneira simples como qualquer outro serviço de CDN. Ou então, também é possível instalar e configurar um projeto, que é mais complexo.
-
-Para instalr via unpkg, basta inserir a linha de código tanto no body e/ou no head dos arquivos html com o link do framework. Vale ressaltar que é recomendado vincular a um número de versão específico para evitar quebra de funções das versões mais novas.
-
-<p align="center">
-  <img src="/imgs/Captura de tela de 2022-11-18 08-05-07.png"/>
-</p>
-
-
+  <h2>Por que instalar Vue?</h2>
+  <h2>Aprendendo com os melhores</h2>
+<h1 align="center">Ferramentas similares</h1>
+<h2>Angular.Js</h2>  
+  <p>Angular é uma plataforma e framework para construção da interface de aplicações usando HTML, CSS e, principalmente, JavaScript, criada pelos desenvolvedores da Google.
+Ele possui alguns elementos básicos que tornam essa construção interessante.
+  </p>
+  <p>Dentre os principais, podemos destacar os componentes, templates, diretivas, roteamento, módulos, serviços, injeção de dependências e ferramentas de infraestrutura que automatizam tarefas, como a de executar os testes unitários de uma aplicação.
+  </p>
+  <p>Angular nos ajuda a criar Single-Page Applications com uma qualidade e produtividade surpreendente!
+Alguns outros pontos dessa plataforma que merecem destaque são o fato de que ela é open source, possui uma grande comunidade, existem várias empresas utilizando e tem muito material de estudo para quem deseja se aperfeiçoar.
+  </p>
+  <p>Site: https://angular.io/</p>
+<h2>React.Js</h2>
+  <p>React JS é uma biblioteca JavaScript para a criação de interfaces de usuário. Ele foi criado em 2011 pelo time do Facebook, o React surgiu com o objetivo de otimizar a atualização e a sincronização de atividades simultâneas no feed de notícias da rede social, entre eles chat, status, listagem de contatos e outros.
+  </p>
+  <p>A princípio, todas essas atividades, chamadas de estados, tinham uma descrição muito complexa. Com o React, esta descrição torna-se mais simples, bem como também é simplificada a conexão entre HTML, CSS e JavaScript e todos os componentes de uma página.
+  </p>
+  <p>Por ter demonstrado grande eficiência, nos anos que se seguiram o React foi incorporado à interface de outras redes sociais do grupo, como o Instagram e, em 2013, seu código foi aberto à comunidade, dando início a sua popularização.
+Hoje, o React é uma das mais prestigiadas bibliotecas de JavaScript do mercado.
+  </p>
+  <p>Site: https://pt-br.reactjs.org/</p>
