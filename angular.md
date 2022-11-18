@@ -4,6 +4,8 @@
 
 # Introdução
 
+Link da apresentação de slides: https://www.canva.com/design/DAFSPAph0cM/QkqLrMckltf5mK3v8NeQAg/edit?utm_content=DAFSPAph0cM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 É um framework JavaScript de código aberto mantido pela Google para a construção de SPA (sigla para *Single Page Applications* ou Aplicações de Página Única). Resumidamente, uma SPA é basicamente uma aplicação web construída em uma só página, na qual a interação e a navegação entre as sessões de uma página ocorrem de maneira a qual não é necessário recarregar a página em cada uma dessas mudanças.
 
 Sua finalidade é nos dar ferramentas necessárias para criação de aplicações SPA, além disso também deixa o desenvolvimento deste tipo de aplicação mais simples e otimizado. Com ele, podemos desenvolver aplicações web voltadas tanto para resoluções desktop quanto para resoluções mobile, tornando-as dinâmicas, modernas e escaláveis.
