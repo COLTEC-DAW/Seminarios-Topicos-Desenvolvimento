@@ -22,7 +22,12 @@ Mesmo em ambientes distintos, a API do Angular permanece praticamente a mesma, o
 Por fim, por mais que o Angular não utilize o conceito de Virtual DOM (conceito utilizado por outros frameworks, como o React), ainda sim o Angular oferece uma performance bem interessante, principalmente com a Ivy, a engine de renderização utilizada desde o Angular 6+.
 
 # Instalação & Configuração
-Primeiramente, é necessário ter o Node.js e o npm instalados na máquina.
+Primeiramente, é necessário ter o Node.js e o npm (um gerenciador de pacotes do Node (Node Package Manager) que vem junto com ele e que é muito útil no desenvolvimento Node) instalados na máquina.
+
+NPM é funciona baseado em dois ofícios:
+- Repositório amplamente usado para publicação de projetos Node.js de códigos abertos.
+- É uma ferramenta de linha de comando que ajuda a interagir com plataformas online, como navegadores e servidores. Essa utilidade auxilia na instalação e desinstalação de pacotes, gerenciamento das versões e gerenciamento de dependências necessárias para executar um projeto.
+
 
 O Node.js é uma tecnologia de servidor que permite que você execute o JavaScript no servidor e crie aplicações da web no lado do servidor. No entanto, o Angular é uma tecnologia de front-end. Portanto, mesmo que você precise instalar o Node.js em sua máquina de desenvolvimento, é apenas para a execução da CLI. Porém, se a aplicação Angular for full stack pode necessitar do Node.
 
@@ -30,7 +35,7 @@ Para instalar, pode se usar o site oficial, https://nodejs.org/en/download/, e s
 Para verificar se o Node foi instalado, basta executar o seguinte comando no prompt de comando, que deverá exibir a versão instalada do Node.
 `$ node -v`
 
-Então, deve-se executar o comando abaixo para instalar a Angular CLI, que é:
+Então, deve-se executar o comando abaixo para instalar a Angular CLI (uma ferramenta open source desenvolvida pelo próprio time do Angular utilizada para facilitar a criação de componentes, classes, services e outros), que é:
 `$ npm install -g @angular/cli`
 
 Para verificar a instalação, pode-se digitar o comando para saber a versão atual da CLI:
@@ -99,6 +104,10 @@ Assim, o projeto estará criado com uma estrutura de diretórios com configuraç
 - **README.md**: um arquivo em markdown que contém a descrição do projeto
 - **tsconfig.json**: o arquivo de configuração para o TypeScript
 - **tslint.json**: o arquivo de configuração para o TSlint (uma ferramenta de análise estática)
+
+TypeScript é um superconjunto de JavaScript, ou seja, um conjunto de ferramentas e formas mais eficientes de escrever código JavaScript, adicionando recursos que não estão presentes de maneira nativa na linguagem.
+
+JSON é um formato que armazena informações estruturadas. O arquivo é basicamente uma alternativa simples e mais leve ao XML (Extensive Markup Language), que tem funções similares, como leitura mais simples, analisador mais fácil e velocidade maior de execução e transporte de dados.
 
 A Angular CLI fornece um conjunto de ferramentas completas para desenvolver aplicações front-end na máquina local. Então não é necessário instalar um servidor, pode-se usar o comando ng serve no terminal para servir o projeto localmente.
 
