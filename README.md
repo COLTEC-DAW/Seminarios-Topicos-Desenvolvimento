@@ -9,7 +9,7 @@
 </div>
 </br>
 
-Link Slide: `https://www.canva.com/design/DAFRiwVuVyM/KG9EojYOpGzh9KVSXyFKhQ/edit`
+Link Slides: `https://www.canva.com/design/DAFRiwVuVyM/KG9EojYOpGzh9KVSXyFKhQ/edit`
 
 <h1 align="center">
   Introdução
