@@ -18,6 +18,7 @@ A instalação do VueJs pode ser feita tanto via unpkg de maneira simples como q
 Para instalr via unpkg, basta inserir a linha de código tanto no body e/ou no head dos arquivos html com o link do framework. Vale ressaltar que é recomendado vincular a um número de versão específico para evitar quebra de funções das versões mais novas.
 
 <p align="center">
-  <img src="/imgs/"/>
+  <img src="/imgs/Captura de tela de 2022-11-18 08-05-07.png"/>
 </p>
+
 
