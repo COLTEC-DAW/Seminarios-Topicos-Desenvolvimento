@@ -32,7 +32,9 @@ Para instalar o VueJs no seu projeto basta colocar o seguinte script no início 
 Através dessa tag o Vue 3 (versão mais atual no momento) será importado em sua versão mais nova e já poderá ser utilizado. 
 
 #### Vue NPM
-Utilizar o Vue por meio da NPM exige como pré-requisitos o nodeJs em sua versão 16.0 ou superior. Com isso já dito, para instalar o Vue no seu projeto por meio da NPM basta utilizar o seguinte comando no console do node:
+Utilizar o Vue por meio da NPM exige como pré-requisitos o nodeJs em sua versão 16.0 ou superior. Para instalar o Node bastar acessar o seguinte link ([Download Node](https://nodejs.org/en/download/current)) escolher o instalador respectivo para as configurações da sua máquina e então abrir o instalador e seguir os passos. Vale ressaltar que para a npm funcionar é necessário habilitar, ao final da instalação dfo Node, o download das dependências.
+
+Com isso já dito, para instalar o Vue no seu projeto por meio da NPM basta utilizar o seguinte comando no console do node:
 
 ```node
 npm create vue@latest
