@@ -22,8 +22,19 @@ O VueJs é utilizado para a criação de Single Page Applications (SPA's) dinâm
 Para alcançar seu objetivo, permitir a criação de SPAs dinâmicas, o VueJs, em sua versão 3, conta com uma série de recursos para isso. Dentre eles, os recursos mais relevantes que iremos abordar serão: variáveis reativas, ligação de dados (data, class and style binding), manipulação de enventos (event handling), renderização condicional (condicional rendering), componentização, criação de eventos personalizados, declaração de propriedades e watchers. Na seção Getting Started iremos nos aprofundar um pouco nesses tópicos.
 
 ## Instalação e configuração
-O VueJs, no momento de escrita deste documento, apresenta duas formas de ser inserido em um projeto, através da CDN
+O VueJs, no momento de escrita deste documento, apresenta duas formas de ser inserido em um projeto, através da CDN (que utiliza o [unpk](https://www.unpkg.com)) ou por meio da instalação do pacote por meio da npm. A seguir iremos abordar as duas formas de instalação.
 
+#### Vue CDN
+Para instalar o VueJs no seu projeto basta colocar o seguinte script no início do código. 
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+Através dessa tag o Vue 3 (versão mais atual no momento) será importado em sua versão mais nova e já poderá ser utilizado. 
+
+#### Vue NPM
+```node
+npm create vue@latest
+```
 
 ## Getting Started
 
