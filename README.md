@@ -51,12 +51,41 @@ npm run dev
 Seguir esse passo a passo irá criar um projeto novo com o vue já instalado e configurado para ser utilizado.
 
 ## Getting Started
+Agora com o Vue instalado é possível fazer uso dos recursos do mesmo. Assim bordaremos em tópicos as principais funcionalidades, ao nosso ver, para o desenvolvimento de um projeto VueJs. Vale lembrar que estamos utilizando o Vue por meio do pacote NPM, podem haver algumas variações das funcionalidades ao utilizar o Vue por meio da CDN, mas os conceitos se mantêm.
 
+### Componentização
+Uma das bases para o desenvolvimento com o Vue é a componentização de partes do código. Assim, não ocorrem repetições inutéis de código, pois há uma reaproveitamento de componentes utilizados em vários lugares, como um botão especial do sistema por exemplo.
 
+Para criar um componente basta criar um arquivo .vue e adicionar a tag "template" nele e então escrever a estrutura html dentro dessa tag. Assim tudo que estiver dentro da tag "template" fará parte da estrutura do componente. Além disso, é possível adicionar tags "style" para estilização do componente e tags "script" para adicionar código ao componente. Assim a estrutura básica de um componente ficaria assim:
 
-- componentização,
-- variáveis reativas, 
-- ligação de dados (data, class and style binding)
+```Vue
+<template>
+    <div>
+        <!-- Seu html aqui -->
+    </div>
+</template>
+
+<script setup>
+    // Seu código aqui
+</script>
+
+<style scoped>
+    /* Seu estilo aqui */
+</style>
+```
+Obs.: o "setup" na tag "script" indica o momento em que o script é renderizado dentro do lifecycle (tempo de vida) do componente. Não iremos abordar essa parte, mas por motivos de completude do conteúdo segue uma image com o lifecycle dos componentes do vue:
+<img src="https://vuejs.org/assets/lifecycle.16e4c08e.png" width="600" height="900" />
+Obs.: o "scoped" na tag "style" indica que o css escrito dentro da tag será aplicado apenas para o componente.
+
+### Ligação de Dados (Binding)
+
+- Data
+- Style
+- Class
+
+### Variáveis Reativas
+Para a criação de SPAs o Vue conta com variáveis reativas que podem ter seus valores 
+
 - renderização condicional (condicional rendering),
 - manipulação de enventos (event handling),
 - criação de eventos personalizados,
