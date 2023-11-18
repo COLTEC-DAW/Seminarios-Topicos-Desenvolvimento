@@ -19,7 +19,7 @@ VueJs começou a ser desenvolvido por Evan You em 2013 com o objetivo de criar u
 
 O VueJs é utilizado para a criação de Single Page Applications (SPA's) dinâmicas. Uma SPA é um site que carrega um único documento e substitui a página existente por novos dados de um servidor web, em vez de recarregar as páginas individualmente do zero. Como resultado, o conteúdo da página é atualizado em tempo real com base nas ações do usuário, com transições rápidas e sem atualização.
 
-Para alcançar seu objetivo, permitir a criação de SPAs dinâmicas, o VueJs, em sua versão 3, conta com uma série de recursos para isso. Dentre eles, os recursos mais relevantes que iremos abordar serão: variáveis reativas, ligação de dados (data, class and style binding), manipulação de enventos (event handling), renderização condicional (condicional rendering), componentização, criação de eventos personalizados, declaração de propriedades e watchers. Na seção Getting Started iremos nos aprofundar um pouco nesses tópicos.
+Para alcançar seu objetivo, permitir a criação de SPAs dinâmicas, o VueJs, em sua versão 3, conta com uma série de recursos para isso. Dentre eles, os recursos mais relevantes que iremos abordar serão: variáveis reativas, ligação de dados (data, class and style binding), manipulação de enventos (event handling), renderização condicional (condicional rendering), componentização, criação de eventos personalizados e declaração de propriedades. Na seção Getting Started iremos nos aprofundar um pouco nesses tópicos.
 
 ## Instalação e configuração
 O VueJs, no momento de escrita deste documento, apresenta duas formas de ser inserido em um projeto, através da CDN (que utiliza o [unpk](https://www.unpkg.com)) ou por meio da instalação do pacote por meio da npm. A seguir iremos abordar as duas formas de instalação.
@@ -51,6 +51,16 @@ npm run dev
 Seguir esse passo a passo irá criar um projeto novo com o vue já instalado e configurado para ser utilizado.
 
 ## Getting Started
+
+
+
+- componentização,
+- variáveis reativas, 
+- ligação de dados (data, class and style binding)
+- renderização condicional (condicional rendering),
+- manipulação de enventos (event handling),
+- criação de eventos personalizados,
+- declaração de propriedades
 
 ## Ferramentas similares
 - React
