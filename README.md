@@ -98,12 +98,55 @@ Uma das funcionalidades principais do VueJs é a ligação de dados (binding), e
     
     <style scoped></style>
       ```
-      "Mustache" notation se refere a essa anotação que utiliza "{{ variável }}". Nesse exemplo após o "Say:" será exibido o valor da variável msg ("Hello World!").
+      "Mustache" notation se refere a essa anotação que utiliza "{{ variável }}". Nesse exemplo, após o "Say:" será exibido o valor da variável msg ("Hello World!").
     
   - v-model
+      Para alguns casos mais especificos, como ligar uma variável um input do html, é necessário utilizar a directiva v-model que permite vincular uma variável a um campo input.
+      ```Vue
+        <template>
+            <div>
+                <input type="text" v-model="name">
+            </div>
+        </template>
+        
+        <script setup>
+        const name = "Carolus";
+        </script>
+        
+        <style scoped></style>
+      ```
+
+      Graças ao v-model, ao renderizar o componente na página irá aparecer no input o valor da variável name ("Carolus"). Porém, vale ressaltar que o uso do v-model é, no geral, para a criação de um ligação de mão dupla (two-way biding), mas para que isso seja possível teriamos que utilizar variáveis reativas. Dessa forma, retornaremos nesse exemplo na seção destinada as variáveis reativas. Ou seja, da forma atual desse código, o input começará com o valor da variável, mas alterações no input pelo usuário não afetarão a variável.
     
-- #### Style
 - #### Class
+    Além da ligação de data, é possível fazer ligações de classe. Segue um exemplo abaixo.
+  
+    ```Vue
+        <template>
+        <div>
+          <p :class="{ 'text-red' : expression }">Text</p>
+        </div>
+        </template>
+        
+        <script setup>
+        const expression = true;
+        </script>
+        
+        <style scoped>
+        .text-red {
+            color: red;
+        }
+        </style>
+    ```
+
+    O atributo ":class", permite que classes sejam adicionadas de forma dinâmica. Se a expressão for verdadeira, como é o caso do exemplo, a classe será vinculada a respectiva tag. No exemplo acima o texto ficará vermelho, pois a classe será atribuida devido ao fato de a variável "expression" ser igual a true.
+
+  
+- #### Style
+    Seguindo a mesma lógica da ligação anterior, é possível atribuir inline styles para elementos de forma dinâmica.
+    ```Vue
+        <div :style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+    ```
 
 ### Variáveis Reativas
 Para a criação de SPAs o Vue conta com variáveis reativas que podem ter seus valores 
