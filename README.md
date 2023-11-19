@@ -229,7 +229,35 @@ const nameStatus = reactive({
 
 Nesse exemplo, se o usuário deixar o input em branco irá aparecer a segunda tag "p", se o usuário escrever uma senha errada irá aparecer a última tag "p" e se o usuário escrever "Hello World!" irá aparecer a primeira tag "p".
   
-- manipulação de enventos (event handling),
+### Manipulação de Eventos (Event Handling)
+O Vue permite também a manipulação de eventos como o click, mouse in, mouse out e outros eventos ([lista para todos os eventos do vue](https://www.javatpoint.com/vue-js-events)). Segue um exemplo simples de manipulação de eventos:
+
+```Vue
+<template>
+    <div>
+      <h1>Number: {{ numberRandom }}</h1>
+      <button @click="clickFunc">Random It</button>
+    </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const numberRandom = ref(42);
+
+const clickFunc = () => {
+  numberRandom.value = Math.round(Math.random() * 100);
+}
+
+</script>
+
+<style scoped>
+</style>
+```
+
+Nesse exemplo, ao pressionar o botão irá disparar o evento click que chamará o "@click" do Vue e então irá chamar a função que gera um número aleatório. 
+
+
 - criação de eventos personalizados,
 - declaração de propriedades
 
