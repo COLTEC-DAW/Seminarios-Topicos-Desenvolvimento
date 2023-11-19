@@ -149,9 +149,86 @@ Uma das funcionalidades principais do VueJs é a ligação de dados (binding), e
     ```
 
 ### Variáveis Reativas
-Para a criação de SPAs o Vue conta com variáveis reativas que podem ter seus valores 
+Para a criação de SPAs, o Vue conta com variáveis reativas que permitem uma ligação de via dupla (two-way biding) que podem ter seus valores alterados dependendo de interações do usuário com a interface do site. Segue um exemplo: 
 
-- renderização condicional (condicional rendering),
+```Vue
+<template>
+    <div>
+      <input type="text" v-model="name">
+      <p>{{ name }}</p>
+    </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const name = ref("Insert your name");
+</script>
+
+<style scoped>
+</style>
+```
+
+Nesse exemplo, o texto que aparece na tag "p" irá mudar de acordo com o que o usuário escrever no campo input, pois a variável além de definir o valor inicial do input, está ligada a ele de forma que alterações feitas no input saerão replicadas na própria variável. 
+
+Para isso, é possível criar variáveis reativas de duas formas, principalmente, por meio da função ref e da função reactive. No geral a função ref é melhor para casos mais simples, como o do exemplo, e a função reactive é melhor para casos mais complexos. A função ref permite iniciar a variável diretamente e a função reactive permite criar variáveis por meio de um Object. Abaixo segue o exemplo anterior com a função reactive ao invés da função ref.
+
+```Vue
+<template>
+    <div>
+      <input type="text" v-model="nameStatus.name">
+      <p>{{ nameStatus.name }}</p>
+    </div>
+</template>
+
+<script setup>
+import { reactive } from 'vue';
+
+
+const nameStatus = reactive({
+  name: "Insert your name"
+});
+</script>
+
+<style scoped>
+</style>
+```
+
+### Renderização Condicional (Condicional Rendering)
+O Vue permite também a adição de renderização condicional, renderizar partes especificas do código dependendo de certas condições. Dessa forma, a criação de páginas interativas e de SPAs no geral se torna muito mais prática. Segue um exemplo de uso:
+
+```Vue
+<template>
+    <div>
+      <input type="text" v-model="nameStatus.name">
+      
+      <p v-if="nameStatus.name === 'Hello World!'">
+        Segredo desbloqueado: {{ nameStatus.name }}
+      </p>
+      <p v-else-if="nameStatus.name === ''">
+        Há um segredo para ser descoberto. Tente!
+      </p>
+      <p v-else>
+        Você tá quase lá! Continue tentando
+      </p>
+    </div>
+</template>
+
+<script setup>
+import { reactive } from 'vue';
+
+
+const nameStatus = reactive({
+  name: ''
+});
+</script>
+
+<style scoped>
+</style>
+```
+
+Nesse exemplo, se o usuário deixar o input em branco irá aparecer a segunda tag "p", se o usuário escrever uma senha errada irá aparecer a última tag "p" e se o usuário escrever "Hello World!" irá aparecer a primeira tag "p".
+  
 - manipulação de enventos (event handling),
 - criação de eventos personalizados,
 - declaração de propriedades
