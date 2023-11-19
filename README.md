@@ -81,7 +81,27 @@ Obs.: o "setup" na tag "script" indica o momento em que o script é renderizado 
 Uma das funcionalidades principais do VueJs é a ligação de dados (binding), ela facilita a criação de SPAs permitindo que as telas sejam dinãmicas e facilitando a conexão entre o que é exibido na tela e o código por trás dela. Dessa forma, optamos por dividir em três categorias de ligação: Data, style e class binding.
 
 - #### Data Binding
-    É possível conectar os dados de uma variável do código com um elemento da tela. Um exemplo      
+    É possível conectar os dados de uma variável do código com um elemento da tela. Para isso existem várias formas, mas as mais usadas e comuns são:
+  - Mustache Notation
+      ```Vue
+      <template>
+        <div>
+            <p>
+              Say: {{ msg }}
+            </p>
+        </div>
+    </template>
+    
+    <script setup>
+    const msg = "Hello World!";
+    </script>
+    
+    <style scoped></style>
+      ```
+      "Mustache" notation se refere a essa anotação que utiliza "{{ variável }}". Nesse exemplo após o "Say:" será exibido o valor da variável msg ("Hello World!").
+    
+  - v-model
+    
 - #### Style
 - #### Class
 
