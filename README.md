@@ -73,15 +73,17 @@ Para criar um componente basta criar um arquivo .vue e adicionar a tag "template
     /* Seu estilo aqui */
 </style>
 ```
+Obs.: o "scoped" na tag "style" indica que o css escrito dentro da tag será aplicado apenas para o componente.
 Obs.: o "setup" na tag "script" indica o momento em que o script é renderizado dentro do lifecycle (tempo de vida) do componente. Não iremos abordar essa parte, mas por motivos de completude do conteúdo segue uma image com o lifecycle dos componentes do vue:
 <img src="https://vuejs.org/assets/lifecycle.16e4c08e.png" width="600" height="900" />
-Obs.: o "scoped" na tag "style" indica que o css escrito dentro da tag será aplicado apenas para o componente.
 
 ### Ligação de Dados (Binding)
+Uma das funcionalidades principais do VueJs é a ligação de dados (binding), ela facilita a criação de SPAs permitindo que as telas sejam dinãmicas e facilitando a conexão entre o que é exibido na tela e o código por trás dela. Dessa forma, optamos por dividir em três categorias de ligação: Data, style e class binding.
 
-- Data
-- Style
-- Class
+- #### Data Binding
+    É possível conectar os dados de uma variável do código com um elemento da tela. Um exemplo      
+- #### Style
+- #### Class
 
 ### Variáveis Reativas
 Para a criação de SPAs o Vue conta com variáveis reativas que podem ter seus valores 
