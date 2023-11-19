@@ -77,6 +77,24 @@ Obs.: o "scoped" na tag "style" indica que o css escrito dentro da tag será apl
 Obs.: o "setup" na tag "script" indica o momento em que o script é renderizado dentro do lifecycle (tempo de vida) do componente. Não iremos abordar essa parte, mas por motivos de completude do conteúdo segue uma image com o lifecycle dos componentes do vue:
 <img src="https://vuejs.org/assets/lifecycle.16e4c08e.png" width="600" height="900" />
 
+Assim, após criar o componente basta importar o arquivo e chama-ló em outra parte do código no formato de tag html. A seguir segue um exemplo utilizando o componente teste em outro componente:
+```Vue
+<template>
+    <div>
+        <Teste />
+    </div>
+</template>
+
+<script setup>
+//caminho até o componente
+import Teste from './teste.vue';
+
+</script>
+
+<style scoped>
+</style>
+```
+
 ### Ligação de Dados (Binding)
 Uma das funcionalidades principais do VueJs é a ligação de dados (binding), ela facilita a criação de SPAs permitindo que as telas sejam dinãmicas e facilitando a conexão entre o que é exibido na tela e o código por trás dela. Dessa forma, optamos por dividir em três categorias de ligação: Data, style e class binding.
 
@@ -257,9 +275,93 @@ const clickFunc = () => {
 
 Nesse exemplo, ao pressionar o botão irá disparar o evento click que chamará o "@click" do Vue e então irá chamar a função que gera um número aleatório. 
 
+### Criação de Eventos Personalizados
+Como citado anteriormente, é possível manipular eventos com o VueJs, porém, além de manipular os eventos que já existem, em muitos casos, é útil a emissão de eventos customizados para um determinado componente. Para exemplificar melhor, iremos fazer com que o componente emita um evento customizado sempre que um número for gerado no exemplo anterior:
+Componente de teste:
+```Vue
+<template>
+    <div>
+      <h1>Number: {{ numberRandom }}</h1>
+      <button @click="clickFunc">Random It</button>
+    </div>
+</template>
 
-- criação de eventos personalizados,
-- declaração de propriedades
+<script setup>
+import { ref } from 'vue';
+
+const emit = defineEmits(['number-generated']);
+
+const numberRandom = ref(42);
+
+const clickFunc = () => {
+  numberRandom.value = Math.round(Math.random() * 100);
+  emit('number-generated', numberRandom.value);
+}
+
+</script>
+
+<style scoped>
+</style>
+```
+
+View que utiliza o componente:
+```Vue
+<Teste @number-generated="(number) => console.log(number)"/>
+```
+
+Nesse novo caso, toda vez que o metodo clickFunc é chamado, é emitido o evento "number-generated" e passa o número gerado como parametro do evento. Assim, fora no parent (compomente que utiliza o nosso componente teste) é possível acessar esse evento para adicionar uma lógica extra. No nosso exemplo, sempre que um número é gerado ele é escrito no console do navagador. Vale a pena ressaltar que é possível, ao invés de escrever a lógica diretamente na directiva, passar o nome da função que será usada.
+
+### Declaração de Propriedades
+Além das funcionalidades citadas anteriormente, é possível atribuir propriedades para um componente para que ele se torne mais versátil e geralmente, para passar informações de uma parte do código para outra. Segue um exemplo ainda, utilizando o nosso componente teste:
+
+Componente teste:
+``` Vue
+<template>
+    <div>
+      <h1>Number: {{ numberRandom }}</h1>
+      <button @click="clickFunc">Random It</button>
+    </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const emit = defineEmits(['number-generated']);
+
+const props = defineProps({
+  // Prop
+  startNumber: {
+    type: Number,
+    required: false,
+    default: 42
+  }
+})
+
+const numberRandom = ref(props.startNumber);
+
+const clickFunc = () => {
+  numberRandom.value = Math.round(Math.random() * 100);
+  emit('number-generated', numberRandom.value);
+}
+
+</script>
+
+<style scoped>
+</style>
+```
+Obs.: a tag required da propriedade startNumber define se ela é obrigatória de ser passada ou não e as demais são autoexplicativas.
+
+
+Chamando o componente:
+``` Vue
+<Teste 
+  :startNumber="25"
+  @number-generated="(number) => console.log(number)"
+/>
+```
+
+Agora além de escrever no console o numéro gerado, estamos passando qual número deve ser o número inicial. Um componente pode ter várias props e o tipo delas podem ser dos mais diversos. Dessa forma, os componentes podem ser extremamente versáteis, o que evita repetição desnecessária no código. 
+
 
 ## Ferramentas similares
 - React
