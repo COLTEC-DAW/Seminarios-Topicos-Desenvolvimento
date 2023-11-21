@@ -113,7 +113,7 @@ CMD ["npm", "start"]
 Passo 2: No mesmo diretório do Dockerfile, execute o seguinte comando para construir a imagem do seu projeto:
 
 <pre>
-docker build -t nome-do-seu-projeto .
+sudo docker build -t nome -f DAW/dockerfiles/ .
 </pre>
 Certifique-se de substituir nome-do-seu-projeto pelo nome que você deseja dar à sua imagem.
 
