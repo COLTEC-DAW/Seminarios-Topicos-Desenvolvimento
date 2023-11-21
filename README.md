@@ -84,8 +84,7 @@ Agora, o Docker está instalado e configurado no seu sistema Ubuntu. Você está
 A seguir, um guia prático para começar a usar o Docker no Ubuntu:
 
 <br>
-Passo 1: Crie um Dockerfile
-Crie um arquivo chamado Dockerfile no diretório do seu projeto. Este arquivo conterá as instruções para construir a imagem do seu aplicativo. Exemplo de um Dockerfile para uma aplicação Node.js:
+Passo 1: Crie um arquivo chamado Dockerfile no diretório do seu projeto. Este arquivo conterá as instruções para construir a imagem do seu aplicativo. Exemplo de um Dockerfile para uma aplicação Node.js:
 
 <pre>
 # Use uma imagem oficial do Node.js como base
