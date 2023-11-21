@@ -1,12 +1,12 @@
-<h1>Docker</h1>
+<h1 align="center">Docker</h1>
 
-<h2>Introdução</h2>
+<h2 align="center">Introdução</h2>
 
-<h2>Instalação & Configuração no Ubuntu</h2>
+<h2 align="center">Instalação & Configuração no Ubuntu</h2>
 
-<h2>Getting Started</h2>
+<h2 align="center">Getting Started</h2>
 
-<h2>Ferramentas similares</h2>
+<h2 align="center">Ferramentas similares</h2>
 
 # Seminários: Ferramentas de Desenvolvimento
 
