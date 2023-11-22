@@ -1,80 +1,168 @@
-# Seminários: Ferramentas de Desenvolvimento
+<h1 align="center">Docker</h1>
 
+<div align="center">
+    <img width="800px" src="https://1000logos.net/wp-content/uploads/2021/11/Docker-Logo.png">
+</div>
 
-**Data: 24/11**
+<h2 align="center">Introdução</h2>
 
-**Valor: 10 pontos**
+<p align="justify">O desenvolvimento de sistemas web modernos frequentemente enfrenta desafios relacionados à consistência, portabilidade e eficiência na gestão de ambientes. A diversidade de configurações de sistema operacional, bibliotecas e dependências muitas vezes resulta em inconsistências que podem levar a problemas durante a implantação e execução das aplicações. É nesse contexto que o Docker se destaca como uma ferramenta revolucionária.</p>
 
-**Grupo: 5 alunos**
+<h3>O Problema:</h3>
 
----
+<p align="justify">Antes da popularização do Docker, desenvolvedores frequentemente se deparavam com cenários onde a aplicação funcionava perfeitamente em uma máquina de desenvolvimento, mas encontrava problemas quando movida para ambientes de produção. Isso ocorria devido às diferenças nas configurações do sistema operacional, versões de bibliotecas e outras variáveis que poderiam afetar o comportamento da aplicação.</p>
 
-Esse seminários tem como objetivo apresentar aos colegas de turma as ferramentas existentes para o desenvolvimento de sistemas web. 
-Para isso seu grupo deverá realizar uma pesquisa sobre um dos temas propostos e elaborar uma apresentação sobre o tema escolhido.
+<p align="justify">Além disso, o processo de configuração do ambiente de desenvolvimento muitas vezes era demorado e propenso a erros, especialmente quando equipes de desenvolvimento precisavam colaborar em projetos compartilhados.</p>
 
-O trabalho de seu grupo deverá ser dividido em duas partes: Roteiro e Apresentação
+<h3>Como o Docker Propõe Resolver Esses Problemas:</h3>
 
-## Roteiro
+<p align="justify">O Docker aborda esses desafios introduzindo o conceito de contêineres. Um contêiner é uma unidade leve e portátil que empacota todo o software necessário para executar uma aplicação, incluindo o código, bibliotecas, dependências e variáveis de ambiente. Ao encapsular todos esses elementos em um contêiner, o Docker garante que a aplicação funcione de maneira consistente em qualquer ambiente que suporte o Docker, eliminando as inconsistências entre ambientes de desenvolvimento, teste e produção.</p>
 
-O roteiro deverá ser composto de um arquivo `README.md` descrevendo o tópico selecionado. Seu roteiro deverá ter, **obrigatóriamente**, as seguintes seções:
+<p align="justify">Além disso, o Docker simplifica significativamente o processo de configuração do ambiente. O uso de arquivos de configuração, como o Dockerfile, permite descrever de forma declarativa o ambiente necessário para a aplicação. Isso não apenas acelera a configuração, mas também melhora a colaboração entre membros da equipe, pois todos utilizam o mesmo ambiente encapsulado no contêiner.</p>
 
-1. **Introdução:** Essa seção deverá introduzir os conceitos do assunto que seu grupo irá abordar. Você deverá mostrar o problema e como a ferramenta se propõe a resolver esse problema.
-2. **Instalação & Configuração:** Nessa seção seu grupo deverá mostrar os passos necessários para instalar e configurar a ferramenta.
-3. **Getting Started:** Aqui seu grupo deverá elaborar um pequeno tutorial de uso exemplificando como a ferramenta poderá ser utilizada no desenvolvimento de uma aplicação web. Vocês deverão mostrar passo a passo como utilizar a ferramenta no desenvolvimento de uma aplicação web do mundo real.
-4. **Ferramentas similares:** Liste pelo menos duas ferramentas que também lidam com o tópico selecionado. Fique a vontade para referenciar ferramentas de outras linguagens (Java, C#, JavaScript, Python, Ruby, etc.). Fale resumidamente (um parágrafo) de cada uma dessas bibliotecas e referencie para sua página principal.
+<br>
+<h2 align="center">Instalação & Configuração no Ubuntu</h2>
 
-*OBS: Sinta-se a vontade para adicionar outras seções no documento da forma que você achar conveniente.* 
+Passo 1: Antes de instalar o Docker, é uma boa prática garantir que os repositórios do sistema estejam atualizados.
 
-## Apresentação
+<pre>
+sudo apt update
+sudo apt upgrade -y
+</pre>
+<br>
+Passo 2: Instale os pacotes necessários para permitir que o sistema use repositórios HTTPS:
 
-Você deverá realizar para a turma uma apresentação entre 12 e 15 minutos sobre o tópico pesquisado pelo seu grupo. 
-Sua apresentação deverá representar uma síntese do que está descrito no roteiro.
-Segue alguns critérios que serão avaliados na apresentação (lista não exaustiva):
+<pre>sudo apt install -y apt-transport-https ca-certificates curl software-properties-common</pre>
+<br>
+Passo 3: Adicione a chave GPG oficial do Docker ao sistema:
 
-- Tempo de apresentação
-- Organização
-- Participação individual
-- Profundidade do tema abordado
-- "Hello, world!" apresentado
+<pre>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</pre>
+<br>
+Passo 4: Adicione o repositório Docker ao sistema:
 
+<pre>
+echo "deb [signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+</pre>
+<br>
+Passo 5: Atualize os repositórios novamente e instale o Docker:
 
-## Formato de Entrega
+<pre>
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+</pre>
+<br>
+Passo 6: Adicionar seu usuário ao grupo Docker (opcional)
+Para executar comandos Docker sem precisar de sudo, adicione seu usuário ao grupo docker:
 
-Seu grupo deverá fazer um fork desse repositório. 
-Esse fork deverá conter o arquivo `README.md` referente ao roteiro escrito pelo grupo, junto dos slides que serão utilizados na apresentação.
+<pre>
+sudo usermod -aG docker $USER
+</pre>
 
-## Temas
+Depois de executar esse comando, faça logout e faça login novamente ou reinicie o sistema para que as alterações tenham efeito.
 
-Abra uma issue no repositório indicando o tema de escolha no título da issue.
-**Não serão admitidos temas repetidos!**
+<br>
+Passo 7: Verifique se o Docker foi instalado corretamente executando o seguinte comando:
 
-### Tecnologias de Desenvolvimento Frontend
+<pre>
+docker --version
+</pre>
 
-- Angular (https://angular.io/)
-- ReactJS (https://reactjs.org/)
-- VueJS (https://vuejs.org/)
+Este comando deve exibir a versão do Docker instalada.
 
-### Tecnologias de Desenvolvimento Backend
+<br>
+Passo 8: Execute um contêiner de teste para garantir que o Docker esteja funcionando corretamente:
 
-- SlimPHP (https://www.slimframework.com/)
-- Laravel (https://laravel.com/)
-- CakePHP (https://cakephp.org/)
-- Symfony (https://symfony.com/)
+<pre>
+docker run hello-world
+</pre>
 
-### Gerenciadores de Dependências
+Isso baixará uma imagem de teste e executará um contêiner simples que imprimirá uma mensagem.
+Agora, o Docker está instalado e configurado no seu sistema Ubuntu. Você está pronto para começar a utilizar contêineres para desenvolver e implantar aplicações.
 
-- NPM (https://www.npmjs.com/)
-- Yarn (https://yarnpkg.com/)
-- Composer (https://getcomposer.org/)
+<br>
+<h2 align="center">Getting Started</h2>
 
-### Armazenamento & Disponibilização de Dados
+A seguir, um guia prático para começar a usar o Docker no Ubuntu:
 
-- MongoDB (https://www.mongodb.com/)
-- SQLite (https://www.sqlite.org/index.html)
-- Doctrine (https://www.doctrine-project.org/)
-- GraphQL (https://graphql.org/)
+<br>
+Passo 1: Crie um arquivo chamado Dockerfile no diretório do seu projeto. Este arquivo conterá as instruções para construir a imagem do seu aplicativo. Exemplo de um Dockerfile para uma aplicação Node.js:
 
-### Ambientes Virtuais de Desenvolvimento
+<pre>
+# Use uma imagem oficial do Node.js como base
+FROM node:14
 
-- Docker (https://www.docker.com/)
-- Vagrant (https://www.vagrantup.com/)
+# Configure o diretório de trabalho no contêiner
+WORKDIR /usr/src/app
+
+# Copie o package.json e o package-lock.json para o diretório de trabalho
+COPY package*.json ./
+
+# Instale as dependências
+RUN npm install
+
+# Copie o restante do código-fonte para o diretório de trabalho
+COPY . .
+
+# Exponha a porta 3000 para fora do contêiner
+EXPOSE 3000
+
+# Comando padrão para iniciar a aplicação
+CMD ["npm", "start"]
+</pre>
+
+<br>
+Passo 2: No mesmo diretório do Dockerfile, execute o seguinte comando para construir a imagem do seu projeto:
+
+<pre>
+sudo docker build -t nome-do-seu-projeto -f DAW/dockerfiles/ .
+</pre>
+Certifique-se de substituir nome-do-seu-projeto pelo nome que você deseja dar à sua imagem.
+
+<br>
+Passo 3: Verifique as imagens disponíveis no seu sistema usando o comando:
+
+<pre>
+docker image ls
+</pre>
+Isso mostrará a lista de imagens, incluindo a que você acabou de criar.
+
+<br>
+Passo 4: Execute o contêiner usando o comando:
+
+<pre>
+docker run -p 3000:3000 nome-do-seu-projeto
+</pre>
+Certifique-se de substituir nome-do-seu-projeto pelo nome da sua imagem.
+
+<br>
+Passo 5: Para verificar se o contêiner está em execução, use o comando:
+
+<pre>
+docker ps
+</pre>
+Este comando mostrará os contêineres em execução, incluindo o nome, ID, portas expostas, etc.
+
+Agora você tem um ambiente Docker configurado e um contêiner em execução com sua aplicação. Este é um ponto de partida básico, e você pode personalizar conforme necessário para o seu projeto específico.
+
+<h2 align="center">Ferramentas Similares</h2>
+
+<h3>Podman:</h3>
+
+<div align="center">
+    <img width="500px" src="https://raw.githubusercontent.com/containers/podman/main/logo/podman-logo.png">
+</div>
+
+</br>
+</br>
+
+<p align="justify">O Podman é uma engine de contêiner de código aberto que se destaca por sua execução sem a necessidade de um daemon centralizado, proporcionando uma alternativa mais leve e flexível ao Docker. Sua capacidade de execução sem privilégios aumenta a segurança, permitindo que os usuários realizem operações relacionadas a contêineres sem privilégios de root. Além disso, o suporte nativo a conceitos de pods simplifica a orquestração e gestão de aplicativos compostos por múltiplos contêineres. Compatível com a API do Docker, o Podman oferece uma transição suave para usuários familiarizados com o ecossistema Docker, tornando-se uma opção atrativa para ambientes que valorizam segurança e flexibilidade.</p>
+
+<h3>Kubernetes:</h3>
+
+<div align="center">
+    <img width="500px" src="https://logos-world.net/wp-content/uploads/2023/06/Kubernetes-Logo.png">
+</div>
+
+<p align="justify">O Kubernetes é uma plataforma de orquestração de contêineres de código aberto, projetada para automatizar o deploy, escalonamento e gerenciamento eficiente de aplicações em ambientes contêinerizados. Com uma arquitetura distribuída e modular, o Kubernetes utiliza configuração por meio de arquivos YAML para definir a infraestrutura como código, possibilitando automação e replicabilidade. Oferece recursos avançados, como balanceamento de carga automático e autoescalonamento, garantindo confiabilidade e disponibilidade contínua dos aplicativos. Essa solução é ideal para empresas que buscam uma orquestração poderosa e automatizada para implementar aplicações em grande escala.</p>
