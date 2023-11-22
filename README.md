@@ -146,7 +146,7 @@ Este comando mostrará os contêineres em execução, incluindo o nome, ID, port
 
 Agora você tem um ambiente Docker configurado e um contêiner em execução com sua aplicação. Este é um ponto de partida básico, e você pode personalizar conforme necessário para o seu projeto específico.
 
-<h2 align="center">Ferramentas similares</h2>
+<h2 align="center">Ferramentas Similares</h2>
 
 <h3>Podman:</h3>
 
