@@ -40,7 +40,9 @@ Para baixar o Laravel e começar a trabalhar com ele em seu computador, você po
 Certifique-se de ter o PHP e o Composer instalados antes de começar.
 
 ### Pré-requisitos
-PHP: O Laravel requer o PHP instalado em seu sistema. Você pode baixar o PHP em [php.net](https://www.php.net)
+PHP 8.2: O Laravel requer o PHP instalado em seu sistema. Você pode baixar o PHP em [php.net](https://www.php.net)
+
+Git: Sistema de controle de versões distribuído. Baixe em [git-scm.com](https://git-scm.com)
 
 Composer: O Composer é uma ferramenta de gerenciamento de dependências para PHP. Você pode baixar o Composer em [getcomposer.org](https://getcomposer.org).
 
@@ -48,11 +50,88 @@ Composer: O Composer é uma ferramenta de gerenciamento de dependências para PH
 Instale o Composer:
 Siga as instruções no site do Composer para instalar a ferramenta em seu sistema.
 
-Abra o terminal ou prompt de comando:
-Abra o terminal no Linux ou macOS, ou o prompt de comando no Windows.
+Abra o terminal ou prompt de comando: Abra o terminal no Linux ou macOS, ou o prompt de comando no Windows.
 
 Execute o seguinte comando para instalar o Laravel:
 
+<code>composer global require "laravel/installer"</code>
+
+Certifique-se que a instalação ocorreu de forma correta e você exportou o Laravel para o seu $PATH (se necessário) utilizando o comando:
+ <code>laravel -v</code>
+ 
+A versão do Laravel que foi instalada deve ser mostrada.
+<br><br>
+
+## Primeiro Projeto com Laravel
+
+Após ter o Laravel instalado podemos começar a utilizá-lo, para criarmos um novo projeto seja
+um site ou aplicação devemos utilizar o comando <code>new</code>, seguido pelo nome do projeto, por exemplo:
+
+<code>laravel new meu-primeiro-site</code>
+
+Aguarde o Composer realizar o download e configurar todas as dependências do projeto (isso pode demorar um pouco, depende da sua internet).
+
+Ao término das configurações uma pasta com o nome do projeto deve ter sido criada no local 
+onde você rodou o comando new, no nosso caso, uma pasta chamada meu-primeiro-site foi criada. 
+Abrindo essa pasta em um editor de código (por exemplo o VS Code) podemos ver a seguinte estrutura:
+
+Sim, note que tem bastante pastas e arquivos, essa é a estrutura padrão de um projeto criado com 
+Laravel, cada pasta e arquivo tem sua finalidade.
+
+### Subindo um Site
+
+Assim como todos os outros CLI (Command-Line Interface), o Laravel também possuí um comando para 
+subir o servidor do projeto, podemos fazer isso utilizando o comando:
+
+<code>php artisan serve</code>
+
+Onde devemos ter a seguinte resposta:
+
+Basicamente a resposta está dizendo:
+
+Seu servidor Laravel de desenvolvimento está rodando localmente (127.0.0.1) na porta 8000, para 
+acessar o projeto vá até o endereço http://127.0.0.1:8000 em seu navegador.
+Também podemos acessar via http://localhost:8000, pois, localhost seria como um “DNS” (apelido) para o IP 127.0.0.1.
+
+Acessando o seguinte endereço em nosso navegador devemos ver algo parecido com:
+
+### Criando Rotas e Views
+Agora, vamos criar uma rota e uma view simples.
+
+Abra o arquivo "routes/web.php" e adicione a seguinte rota:
+
+<pre><code>use Illuminate\Support\Facades\Route;
+Route::get('/minhapagina', function () {
+ return view('minhaView');
+});
+</code></pre>
+
+Essa rota responde a uma requisição GET para "/minhapagina" e retorna a view chamada "minhaView".
+
+Agora, crie a view. Vá até a pasta "resources/views" e crie um arquivo chamado "minhaView.blade.php" com o seguinte conteúdo:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Minha Página</title>
+</head>
+<body>
+ <h1>Olá, Laravel!</h1>
+ <p>Esta é a minha primeira página com Laravel.</p>
+</body>
+</html>
+```
+
+Agora, se você acessar http://seu-domínio/minhapagina no navegador, verá a página com a mensagem "Olá, Laravel!".
+
+Lembrando que este é apenas um exemplo básico. Laravel oferece muitas funcionalidades poderosas
+para desenvolvimento web, como Eloquent (um ORM), Blade (um mecanismo de template), middleware,
+entre outros. Essa estrutura básica pode ser expandida para criar aplicativos mais complexos.
+<br><br>
+      
 ## Ferramentas Similares
 
 Duas ferramentas similares ao Laravel são o Symfony (PHP) e o Django (Python). Symfony é um
