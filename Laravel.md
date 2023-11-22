@@ -151,3 +151,13 @@ flexível e modular. Django, por outro lado, é um framework web Python que segu
 "batteries-included", oferecendo uma grande variedade de funcionalidades integradas. Ambos os 
 frameworks têm comunidades ativas e são adequados para o desenvolvimento web, embora o Laravel 
 se destaque pela sua elegância e sintaxe expressiva em PHP.
+<br><br>
+
+## Referencias
+[https://hcode.com.br/blog/instalando-e-configurando-o-laravel-no-windows-linux-e-mac](https://hcode.com.br/blog/instalando-e-configurando-o-laravel-no-windows-linux-e-mac)
+
+[https://www.youtube.com/watch?v=4oxjaQCJRaA](https://www.youtube.com/watch?v=4oxjaQCJRaA)
+
+[https://www.youtube.com/watch?v=W33t7M2ZXoU&t=4s](https://www.youtube.com/watch?v=W33t7M2ZXoU&t=4s)
+
+[https://satellasoft.com/artigo/php/como-criar-e-rodar-um-projeto-no-laravel](https://satellasoft.com/artigo/php/como-criar-e-rodar-um-projeto-no-laravel)
