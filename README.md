@@ -1,5 +1,9 @@
 <h1 align="center">Docker</h1>
 
+<div align="center">
+    <img width="800px" src="https://1000logos.net/wp-content/uploads/2021/11/Docker-Logo.png">
+</div>
+
 <h2 align="center">Introdução</h2>
 
 <p align="justify">O desenvolvimento de sistemas web modernos frequentemente enfrenta desafios relacionados à consistência, portabilidade e eficiência na gestão de ambientes. A diversidade de configurações de sistema operacional, bibliotecas e dependências muitas vezes resulta em inconsistências que podem levar a problemas durante a implantação e execução das aplicações. É nesse contexto que o Docker se destaca como uma ferramenta revolucionária.</p>
@@ -68,8 +72,7 @@ docker --version
 Este comando deve exibir a versão do Docker instalada.
 
 <br>
-Passo 8: Verificar se o Docker está Funcionando
-Execute um contêiner de teste para garantir que o Docker esteja funcionando corretamente:
+Passo 8: Execute um contêiner de teste para garantir que o Docker esteja funcionando corretamente:
 
 <pre>
 docker run hello-world
@@ -113,7 +116,7 @@ CMD ["npm", "start"]
 Passo 2: No mesmo diretório do Dockerfile, execute o seguinte comando para construir a imagem do seu projeto:
 
 <pre>
-sudo docker build -t nome -f DAW/dockerfiles/ .
+sudo docker build -t nome-do-seu-projeto -f DAW/dockerfiles/ .
 </pre>
 Certifique-se de substituir nome-do-seu-projeto pelo nome que você deseja dar à sua imagem.
 
@@ -145,10 +148,21 @@ Agora você tem um ambiente Docker configurado e um contêiner em execução com
 
 <h2 align="center">Ferramentas similares</h2>
 
-Podman:
+<h3>Podman:</h3>
 
-Podman é uma ferramenta de gerenciamento de contêineres que se concentra em fornecer uma experiência semelhante ao Docker, mas sem a necessidade de um daemon. Ele é compatível com as imagens Docker e fornece uma alternativa leve.
+<div align="center">
+    <img width="500px" src="https://raw.githubusercontent.com/containers/podman/main/logo/podman-logo.png">
+</div>
 
-Kubernetes:
+</br>
+</br>
 
-Embora Kubernetes seja mais uma plataforma de orquestração do que uma ferramenta de contêiner isolada, é comumente comparado ao Docker devido à sua capacidade de gerenciar contêineres em grande escala. Kubernetes fornece um ecossistema robusto para implantar, escalar e gerenciar aplicações em contêineres.
+<p align="justify">O Podman é uma engine de contêiner de código aberto que se destaca por sua execução sem a necessidade de um daemon centralizado, proporcionando uma alternativa mais leve e flexível ao Docker. Sua capacidade de execução sem privilégios aumenta a segurança, permitindo que os usuários realizem operações relacionadas a contêineres sem privilégios de root. Além disso, o suporte nativo a conceitos de pods simplifica a orquestração e gestão de aplicativos compostos por múltiplos contêineres. Compatível com a API do Docker, o Podman oferece uma transição suave para usuários familiarizados com o ecossistema Docker, tornando-se uma opção atrativa para ambientes que valorizam segurança e flexibilidade.</p>
+
+<h3>Kubernetes:</h3>
+
+<div align="center">
+    <img width="500px" src="https://logos-world.net/wp-content/uploads/2023/06/Kubernetes-Logo.png">
+</div>
+
+<p align="justify">O Kubernetes é uma plataforma de orquestração de contêineres de código aberto, projetada para automatizar o deploy, escalonamento e gerenciamento eficiente de aplicações em ambientes contêinerizados. Com uma arquitetura distribuída e modular, o Kubernetes utiliza configuração por meio de arquivos YAML para definir a infraestrutura como código, possibilitando automação e replicabilidade. Oferece recursos avançados, como balanceamento de carga automático e autoescalonamento, garantindo confiabilidade e disponibilidade contínua dos aplicativos. Essa solução é ideal para empresas que buscam uma orquestração poderosa e automatizada para implementar aplicações em grande escala.</p>
