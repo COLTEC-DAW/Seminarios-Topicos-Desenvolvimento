@@ -27,6 +27,8 @@ Algumas funções muito úteis que podemos encontrar nesse framework PHP são:
 * Por ser mais popular, é mais fácil de encontrar soluções na internet;
 * Outras funcionalidades como Blade, Elixir, Homestead, Migrations e Artisan.
 
+<div align="center"><img src="laravel.png" style="width:20%"></div>
+
 Outro ponto funcional é que o framework é baseado na arquitetura MVC, ou Model-View-Controller, 
 que é um padrão de arquitetura de software para reutilização de código. O nome se dá por conta 
 da divisão de um sistema em 3 camadas: modelo, visão e controle. Enquanto a primeira está 
@@ -45,6 +47,8 @@ PHP 8.2: O Laravel requer o PHP instalado em seu sistema. Você pode baixar o PH
 Git: Sistema de controle de versões distribuído. Baixe em [git-scm.com](https://git-scm.com)
 
 Composer: O Composer é uma ferramenta de gerenciamento de dependências para PHP. Você pode baixar o Composer em [getcomposer.org](https://getcomposer.org).
+
+<div align="center"><img src="git.png" style="width:20%"><img src="composer.png" style="width:20%"></div>
 
 ### Passos para baixar o Laravel
 Instale o Composer:
@@ -75,6 +79,9 @@ Ao término das configurações uma pasta com o nome do projeto deve ter sido cr
 onde você rodou o comando new, no nosso caso, uma pasta chamada meu-primeiro-site foi criada. 
 Abrindo essa pasta em um editor de código (por exemplo o VS Code) podemos ver a seguinte estrutura:
 
+<div align="center"><img src="prompt1.jpeg" style="width:20%"></div>
+<br>
+
 Sim, note que tem bastante pastas e arquivos, essa é a estrutura padrão de um projeto criado com 
 Laravel, cada pasta e arquivo tem sua finalidade.
 
@@ -87,6 +94,8 @@ subir o servidor do projeto, podemos fazer isso utilizando o comando:
 
 Onde devemos ter a seguinte resposta:
 
+<img src="prompt2.jpeg" style="width:100%">
+
 Basicamente a resposta está dizendo:
 
 Seu servidor Laravel de desenvolvimento está rodando localmente (127.0.0.1) na porta 8000, para 
@@ -94,6 +103,8 @@ acessar o projeto vá até o endereço http://127.0.0.1:8000 em seu navegador.
 Também podemos acessar via http://localhost:8000, pois, localhost seria como um “DNS” (apelido) para o IP 127.0.0.1.
 
 Acessando o seguinte endereço em nosso navegador devemos ver algo parecido com:
+
+<img src="site.png" style="width:100%">
 
 ### Criando Rotas e Views
 Agora, vamos criar uma rota e uma view simples.
