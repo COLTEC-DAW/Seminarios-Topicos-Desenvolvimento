@@ -27,7 +27,7 @@ Algumas funções muito úteis que podemos encontrar nesse framework PHP são:
 * Por ser mais popular, é mais fácil de encontrar soluções na internet;
 * Outras funcionalidades como Blade, Elixir, Homestead, Migrations e Artisan.
 
-<div align="center"><img src="laravel.png" style="width:20%"></div>
+<div align="center"><img src="images/laravel.png" style="width:20%"></div>
 
 Outro ponto funcional é que o framework é baseado na arquitetura MVC, ou Model-View-Controller, 
 que é um padrão de arquitetura de software para reutilização de código. O nome se dá por conta 
@@ -48,7 +48,7 @@ Git: Sistema de controle de versões distribuído. Baixe em [git-scm.com](https:
 
 Composer: O Composer é uma ferramenta de gerenciamento de dependências para PHP. Você pode baixar o Composer em [getcomposer.org](https://getcomposer.org).
 
-<div align="center"><img src="git.png" style="width:20%"><img src="composer.png" style="width:20%"></div>
+<div align="center"><img src="images/git.png" style="width:20%"><img src="images/composer.png" style="width:20%"></div>
 
 ### Passos para baixar o Laravel
 Instale o Composer:
@@ -79,7 +79,7 @@ Ao término das configurações uma pasta com o nome do projeto deve ter sido cr
 onde você rodou o comando new, no nosso caso, uma pasta chamada meu-primeiro-site foi criada. 
 Abrindo essa pasta em um editor de código (por exemplo o VS Code) podemos ver a seguinte estrutura:
 
-<div align="center"><img src="prompt1.jpeg" style="width:20%"></div>
+<div align="center"><img src="images/prompt1.jpeg" style="width:20%"></div>
 <br>
 
 Sim, note que tem bastante pastas e arquivos, essa é a estrutura padrão de um projeto criado com 
@@ -94,7 +94,7 @@ subir o servidor do projeto, podemos fazer isso utilizando o comando:
 
 Onde devemos ter a seguinte resposta:
 
-<img src="prompt2.jpeg" style="width:100%">
+<img src="images/prompt2.jpeg" style="width:100%">
 
 Basicamente a resposta está dizendo:
 
@@ -104,7 +104,7 @@ Também podemos acessar via http://localhost:8000, pois, localhost seria como um
 
 Acessando o seguinte endereço em nosso navegador devemos ver algo parecido com:
 
-<img src="site.png" style="width:100%">
+<img src="images/site.png" style="width:100%">
 
 ### Criando Rotas e Views
 Agora, vamos criar uma rota e uma view simples.
