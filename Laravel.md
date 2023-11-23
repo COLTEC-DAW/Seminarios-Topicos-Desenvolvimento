@@ -106,37 +106,54 @@ Acessando o seguinte endereço em nosso navegador devemos ver algo parecido com:
 
 <img src="images/site.png" style="width:100%">
 
+### Modelando os Dados
+
 ### Criando Rotas e Views
-Agora, vamos criar uma rota e uma view simples.
+Agora, vamos criar uma rota e uma view para a nossa aplicação.
 
 Abra o arquivo "routes/web.php" e adicione a seguinte rota:
 
-<pre><code>use Illuminate\Support\Facades\Route;
-Route::get('/minhapagina', function () {
- return view('minhaView');
-});
-</code></pre>
+(routes/web.php)
+```
+<?php
 
-Essa rota responde a uma requisição GET para "/minhapagina" e retorna a view chamada "minhaView".
+use Illuminate\Support\Facades\Route;
+/*use App\Http\Controllers\ArtigoController;
 
-Agora, crie a view. Vá até a pasta "resources/views" e crie um arquivo chamado "minhaView.blade.php" com o seguinte conteúdo:
+Route::resource('/artigos/index.blade', ArtigoController::class);*/
+use App\Http\Controllers\ArtigoController;
 
+Route::get('/listar-artigos', [ArtigoController::class, 'listarArtigos']);
+```
+
+Essa rota responde a uma requisição GET para "/listar-artigos" e retorna a view chamada "listarArtigos".
+
+Agora, crie a view. Vá até a pasta "resources/views" e crie um arquivo chamado "listar-artigos.blade.php" com o seguinte conteúdo:
+
+(resources/views/listar-artigos.blade.php)
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Minha Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Artigos</title>
 </head>
 <body>
- <h1>Olá, Laravel!</h1>
- <p>Esta é a minha primeira página com Laravel.</p>
+    <h1>Lista de Artigos</h1>
+
+    @foreach ($artigos as $artigo)
+        <h2>{{ $artigo->titulo }}</h2>
+        <p>{{ $artigo->conteudo }}</p>
+        <hr>
+    @endforeach
 </body>
 </html>
 ```
 
-Agora, se você acessar http://seu-domínio/minhapagina no navegador, verá a página com a mensagem "Olá, Laravel!".
+Agora, se você acessar http://seu-domínio/listar-artigos no navegador, verá o seguinte resultado:
+
+<img src="images/site2.png" style="width:100%">
 
 Lembrando que este é apenas um exemplo básico. Laravel oferece muitas funcionalidades poderosas
 para desenvolvimento web, como Eloquent (um ORM), Blade (um mecanismo de template), middleware,
