@@ -127,7 +127,8 @@ Rode o comando <code>php artisan migrate</code> no terminal para efetivar as mud
 
 #### Models
 
-Agora, vamos modelar nosso Article.<br>
+Agora, vamos modelar nosso Article.
+
 Para isso, crie o arquivo 2023_11_22_141349_create_article.php em migrations:<br>
 <code>php artisan make:model Article -m</code>
 
@@ -191,7 +192,8 @@ class Article extends Model
 
 #### Seeders
 
-Os Seeders são arquivos em que colocamos os dados referentes aos modelos feitos com os quais desejamos popular o banco.<br>
+Os Seeders são arquivos em que colocamos os dados referentes aos modelos feitos com os quais desejamos popular o banco.
+
 Para criar um Seeder "ArtigoSeeder.php" para nosso modelo de Article rode o comando:<br>
 <code>php artisan make:seeder ArtigoSeeder</code>
 
@@ -232,6 +234,37 @@ class ArtigoSeeder extends Seeder
 <code>php artisan db:seed --class=ArtigoSeeder</code>
 
 ### Controller
+
+Os Controllers são responsáveis por receber todas as requisições do usuário e conectar os modelos com as views da nossa aplicação.
+
+Para criar um Controller para nossa aplicação digicte no terminal:<br>
+<code>php artisan make:controller ArtigoController --resource</code>
+
+Esse comando cria o arquivo "ArtigoController.php" com métodos CRUD padrão.
+
+Agora, adicione nele a função listarArtigos, que buscará no banco todos os registros 
+da tabela article referente as instâncias do nosso modelo e criamos uma view com o resultado:
+
+(App/Http/controllers/ArtigoController.php)
+```
+<?php
+namespace App\Http\Controllers;
+
+use App\Models\Article;
+
+use Illuminate\Http\Request;
+
+class ArtigoController extends Controller
+{
+    public function listarArtigos()
+    {
+        $artigos = Article::all();
+        return view('listar-artigos', compact('artigos'));
+    }
+}
+```
+
+Agora basta apenas fazer as Rotas que utilizaram nosso Controller e as Views (paginas) da nossa aplicação.
 
 ### Criando Rotas e Views
 Agora, vamos criar uma rota e uma view para a nossa aplicação.
