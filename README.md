@@ -12,6 +12,7 @@
 - Gabrielle Maia
 - Thales Davi
 
+### [Vídeo de apresentação](https://drive.google.com/file/d/1GjnQkadBAJuXtxf3-kJglAG8KTYcXeLh/view?usp=sharing)
 
 # Roteiro
 ## Introdução
