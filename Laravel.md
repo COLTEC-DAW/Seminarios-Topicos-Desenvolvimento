@@ -108,6 +108,131 @@ Acessando o seguinte endereço em nosso navegador devemos ver algo parecido com:
 
 ### Modelando os Dados
 
+A modelagem de dados é uma da principais partes do projeto compondo os dados e sua dinâmica.<br>
+De exemplo, iremos fazer uma modelagem simples de um artigo por meio de uma classe Article, que dita o formato dos nosso dados.
+
+Primeiro, precisamos configurar o ambiente estabelecendo uma conexão com o banco de dados. <br>
+Para isso, vá no arquivo ".env" e faça as seguintes alterações:
+
+(.env)
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=artigos
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+Rode o comando <code>php artisan migrate</code> no terminal para efetivar as mudanças
+
+#### Models
+
+Agora, vamos modelar nosso Article.<br>
+Para isso, crie o arquivo 2023_11_22_141349_create_article.php em migrations:<br>
+<code>php artisan make:model Article -m</code>
+
+Coloque os atributos desejados na nova tabela e faça a migração para que a tabela
+seja criada no banco:
+
+(database/migrations/2023_11_22_141349_create_article.php)
+```
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('artigos', function (Blueprint $table) {
+            $table->id();
+            $table->string('titulo');
+            $table->text('conteudo');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('artigos');
+    }
+};
+```
+<code>php artisan migrate</code>
+
+Esse comando também cria o arquivo "Article.php", modifique-o para conectar o modelo com o banco de dados:
+
+(App/Models/Article.php)
+```
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Article extends Model
+{
+    protected $table = 'artigos';
+
+    protected $fillable = [
+        'titulo', 'conteudo',
+    ];
+}
+```
+
+#### Seeders
+
+Os Seeders são arquivos em que colocamos os dados referentes aos modelos feitos com os quais desejamos popular o banco.<br>
+Para criar um Seeder "ArtigoSeeder.php" para nosso modelo de Article rode o comando:<br>
+<code>php artisan make:seeder ArtigoSeeder</code>
+
+Depois, coloque as informações que deseja dentro do arquivo e mande as instâncias para o banco de dados:
+
+(database/seeders/ArtigoSeeder.php)
+```
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ArtigoSeeder extends Seeder
+{
+    public function run()
+    {
+        DB::table('artigos')->truncate();
+
+        DB::table('artigos')->insert([
+            [
+                'titulo' => 'Artigo 1',
+                'conteudo' => 'Conteúdo do Artigo 1.',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'titulo' => 'Artigo 2',
+                'conteudo' => 'Conteúdo do Artigo 2.',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
+```
+<code>php artisan db:seed --class=ArtigoSeeder</code>
+
+### Controller
+
 ### Criando Rotas e Views
 Agora, vamos criar uma rota e uma view para a nossa aplicação.
 
@@ -153,7 +278,7 @@ Agora, crie a view. Vá até a pasta "resources/views" e crie um arquivo chamado
 
 Agora, se você acessar http://seu-domínio/listar-artigos no navegador, verá o seguinte resultado:
 
-<img src="images/site2.png" style="width:100%">
+<img src="images/site2.jpeg" style="width:100%">
 
 Lembrando que este é apenas um exemplo básico. Laravel oferece muitas funcionalidades poderosas
 para desenvolvimento web, como Eloquent (um ORM), Blade (um mecanismo de template), middleware,
