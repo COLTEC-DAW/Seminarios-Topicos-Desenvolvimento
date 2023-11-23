@@ -157,12 +157,16 @@ Agora você tem um ambiente Docker configurado e um contêiner em execução com
 </br>
 </br>
 
-<p align="justify">O Podman é uma engine de contêiner de código aberto que se destaca por sua execução sem a necessidade de um daemon centralizado, proporcionando uma alternativa mais leve e flexível ao Docker. Sua capacidade de execução sem privilégios aumenta a segurança, permitindo que os usuários realizem operações relacionadas a contêineres sem privilégios de root. Além disso, o suporte nativo a conceitos de pods simplifica a orquestração e gestão de aplicativos compostos por múltiplos contêineres. Compatível com a API do Docker, o Podman oferece uma transição suave para usuários familiarizados com o ecossistema Docker, tornando-se uma opção atrativa para ambientes que valorizam segurança e flexibilidade.</p>
+<p align="justify">De forma semelhante ao Docker, o Podman também permite criar, executar e gerenciar contêineres. Por outro lado, se difere do Docker no sentido de que não precisa de um Daemon central para que possa ser executado, o que pode ser vantajoso em alguns casos. Oferece uma transição suave para os desenvolvedores que já são familiarizados com o Docker por sua compatibilidade de ferramentas.</p>
 
-<h3>Kubernetes:</h3>
+<p align="justify">Também é compatível com diversas ferramentas de desenvolvimento conhecidas, como VSCode e GitHub.</p>
+
+<h3>LXC:</h3>
 
 <div align="center">
-    <img width="500px" src="https://logos-world.net/wp-content/uploads/2023/06/Kubernetes-Logo.png">
+    <img width="300px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Linux_Containers_logo.svg/1024px-Linux_Containers_logo.svg.png">
 </div>
 
-<p align="justify">O Kubernetes é uma plataforma de orquestração de contêineres de código aberto, projetada para automatizar o deploy, escalonamento e gerenciamento eficiente de aplicações em ambientes contêinerizados. Com uma arquitetura distribuída e modular, o Kubernetes utiliza configuração por meio de arquivos YAML para definir a infraestrutura como código, possibilitando automação e replicabilidade. Oferece recursos avançados, como balanceamento de carga automático e autoescalonamento, garantindo confiabilidade e disponibilidade contínua dos aplicativos. Essa solução é ideal para empresas que buscam uma orquestração poderosa e automatizada para implementar aplicações em grande escala.</p>
+<p align="justify">O LXC foi uma das primeiras ferramentas criadas para contornar o problema de redundância e alto gasto das Máquinas Virtuais. Foi criado antes do Docker e acabou sendo ofuscado pelo seu concorrente, que foi lançado 5 anos depois. Como tecnologia, permitia criar containers (ambientes isolados) em sistemas Linux e era mais efetivo que uma máquina virtual pois fazia com que o kernel utilizado pelo container fosse o mesmo do sistema, diminuindo os gastos. </p>
+
+<p align="justify">Dentre os componentes do LXC há a biblioteca “liblxc” e suporte às linguagens de programação: Lua, Python, Ruby, Go e Haskell.</p>
