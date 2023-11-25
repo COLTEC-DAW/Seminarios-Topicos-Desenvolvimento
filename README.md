@@ -16,65 +16,106 @@ O trabalho de seu grupo deverá ser dividido em duas partes: Roteiro e Apresenta
 
 ## Roteiro
 
-O roteiro deverá ser composto de um arquivo `README.md` descrevendo o tópico selecionado. Seu roteiro deverá ter, **obrigatóriamente**, as seguintes seções:
+## Introdução
 
-1. **Introdução:** Essa seção deverá introduzir os conceitos do assunto que seu grupo irá abordar. Você deverá mostrar o problema e como a ferramenta se propõe a resolver esse problema.
-2. **Instalação & Configuração:** Nessa seção seu grupo deverá mostrar os passos necessários para instalar e configurar a ferramenta.
-3. **Getting Started:** Aqui seu grupo deverá elaborar um pequeno tutorial de uso exemplificando como a ferramenta poderá ser utilizada no desenvolvimento de uma aplicação web. Vocês deverão mostrar passo a passo como utilizar a ferramenta no desenvolvimento de uma aplicação web do mundo real.
-4. **Ferramentas similares:** Liste pelo menos duas ferramentas que também lidam com o tópico selecionado. Fique a vontade para referenciar ferramentas de outras linguagens (Java, C#, JavaScript, Python, Ruby, etc.). Fale resumidamente (um parágrafo) de cada uma dessas bibliotecas e referencie para sua página principal.
+O NPM foi concebido em 2009 por Isaac Z. Schlueter como uma solução para os desafios enfrentados pelos desenvolvedores na gestão de dependências em projetos JavaScript. Naquela época, a falta de uma ferramenta unificada para gerenciar bibliotecas e módulos tornava a colaboração e a construção de projetos mais complexas.
 
-*OBS: Sinta-se a vontade para adicionar outras seções no documento da forma que você achar conveniente.* 
+Isaac criou o NPM para suprir essa lacuna, oferecendo uma maneira eficiente e organizada de compartilhar, instalar e gerenciar dependências em projetos JavaScript. Ao longo dos anos, o NPM evoluiu, tornando-se uma parte essencial do ecossistema JavaScript, utilizado por milhões de desenvolvedores em todo o mundo.
 
-## Apresentação
+O NPM, ou Node Package Manager, é um gerenciador de pacotes que abrange não apenas o Node, mas o JavaScript como um todo, conforme definido pelo site oficial (npmjs.com). Independentemente da aplicação, seja backend, frontend, mobile ou outras, o NPM facilita a instalação de pacotes JavaScript. Mesmo ao utilizar frameworks front-end, como React ou Next, que incorporam elementos do Node, a presença do Node é ubíqua, justificando a denominação do NPM. Em resumo, o NPM é o gerenciador de pacotes JavaScript.
 
-Você deverá realizar para a turma uma apresentação entre 12 e 15 minutos sobre o tópico pesquisado pelo seu grupo. 
-Sua apresentação deverá representar uma síntese do que está descrito no roteiro.
-Segue alguns critérios que serão avaliados na apresentação (lista não exaustiva):
+Define-se um gerenciador de pacotes como uma ferramenta de software projetada para simplificar a instalação, atualização, configuração e remoção de bibliotecas, frameworks e outras dependências em um projeto de software. Exemplos incluem NPM para JavaScript/Node.js, pip para Python, Composer para PHP, Maven para Java, entre outros.
 
-- Tempo de apresentação
-- Organização
-- Participação individual
-- Profundidade do tema abordado
-- "Hello, world!" apresentado
+## Instalação e Configuração
+
+A instalação do NPM é realizada por meio do site nodejs.org/en, que detecta automaticamente o sistema operacional do usuário. O NPM é incorporado ao Node, sendo altamente recomendável instalá-los em conjunto. No caso do Windows, sugere-se utilizar o instalador específico para esse sistema, evitando a necessidade de descompactação manual.
+
+Para instalar o Node.js e o NPM (Node Package Manager) no MacOS usando o Homebrew, você pode utilizar o seguinte comando no terminal:
+
+`brew install node`
+
+Esse comando instalará tanto o Node.js quanto o NPM. O Homebrew cuidará da instalação e configuração, tornando o processo mais simples e gerenciável. Certifique-se de ter o Homebrew instalado no seu sistema antes de executar esse comando. Se você ainda não tem o Homebrew instalado, pode instalá-lo com o seguinte comando:
+
+`/bin/bash -c "$(curl-fsSLhttps://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+Após a instalação, você pode usar o comando brew update para garantir que o Homebrew esteja atualizado. Em seguida, execute brew install node para instalar o Node.js e o NPM no seu sistema MacOS.
 
 
-## Formato de Entrega
+No Linux, o método para instalar o Node.js e o NPM pode variar um pouco dependendo da distribuição. Abaixo estão instruções para algumas distribuições populares:
 
-Seu grupo deverá fazer um fork desse repositório. 
-Esse fork deverá conter o arquivo `README.md` referente ao roteiro escrito pelo grupo, junto dos slides que serão utilizados na apresentação.
+(Ubuntu ou Debian)
+```
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+```
 
-## Temas
+(Fedora)
+```
+sudo dnf install nodejs
+sudo dnf install npm
+```
 
-Abra uma issue no repositório indicando o tema de escolha no título da issue.
-**Não serão admitidos temas repetidos!**
 
-### Tecnologias de Desenvolvimento Frontend
+Verifique a instalação bem-sucedida com os comandos "node -v" e "npm -v" no terminal, os quais devem apresentar números indicando êxito. Caso contrário, recomenda-se revisitar os passos anteriores.
 
-- Angular (https://angular.io/)
-- ReactJS (https://reactjs.org/)
-- VueJS (https://vuejs.org/)
+## Getting Started
 
-### Tecnologias de Desenvolvimento Backend
+Para iniciar o uso do NPM, execute o comando "npm init", cujo propósito será detalhado. O ponto de entrada (entry point) padrão é definido como "helloworld.js". Após essa etapa, ao verificar as dependências com "npm ls", constata-se a ausência de pacotes.
 
-- SlimPHP (https://www.slimframework.com/)
-- Laravel (https://laravel.com/)
-- CakePHP (https://cakephp.org/)
-- Symfony (https://symfony.com/)
+Demonstrando a utilidade do NPM, a instalação e utilização do pacote "Colors" é exemplificada. Este repositório de códigos validados e documentados ilustra a vasta gama de recursos disponíveis. Adicionalmente, é enfatizado o cuidado ao selecionar pacotes sem documentação.
 
-### Gerenciadores de Dependências
+Suas principais funcionalidades incluem:
 
-- NPM (https://www.npmjs.com/)
-- Yarn (https://yarnpkg.com/)
-- Composer (https://getcomposer.org/)
+1. Instalação de Pacotes:
+    `-Comando: npm install <nome-do-pacote>`
 
-### Armazenamento & Disponibilização de Dados
+2. Gestão de Dependências:
+   ` -Comando: npm install`
 
-- MongoDB (https://www.mongodb.com/)
-- SQLite (https://www.sqlite.org/index.html)
-- Doctrine (https://www.doctrine-project.org/)
-- GraphQL (https://graphql.org/)
+3. Instalação Global de Pacotes:
+  `  -Comando: npm install -g <nome-do-pacote>`
 
-### Ambientes Virtuais de Desenvolvimento
+4. Criação de um Projeto NPM:
+    `-Comando: npm init`
+   
+6. Atualização de Pacotes:
+  `  -Comando: npm update <nome-do-pacote>`
 
-- Docker (https://www.docker.com/)
-- Vagrant (https://www.vagrantup.com/)
+7. Remoção de Pacotes:
+  `  -Comando: npm uninstall <nome-do-pacote>`
+
+8. Listagem de Pacotes Instalados:
+   ` -Comando: npm list`
+
+9. Pesquisa de Pacotes:
+  `  -Comando: npm search <termo-de-busca>`
+
+10. Publicação de Pacotes:
+   ` -Comando: npm publish`
+
+Essas são apenas algumas das funcionalidades do NPM. Ele desempenha um papel crucial na gestão de dependências, automação de tarefas e facilitação do desenvolvimento JavaScript em projetos Node.js e em outras áreas do ecossistema web.
+
+
+## Exemplos práticos
+
+Como exemplo prático, considere a criação de um simples site de lista de compras. O pacote "date-fns" é incorporado para facilitar manipulações de datas em JavaScript, exemplificando sua aplicação em registrar o horário de adição de itens à lista.
+
+## Ferramentas Similares
+
+Além do NPM, ferramentas como Yarn e pnpm são mencionadas como alternativas. Yarn destaca-se pela rapidez, utilizando um cache local para acelerar as instalações. Por sua vez, o pnpm visa otimizar o espaço em disco ao compartilhar dependências entre projetos, economizando espaço e tempo na instalação.
+
+Essas ferramentas complementares proporcionam escolhas flexíveis para atender às necessidades específicas dos projetos, melhorando eficiência na gestão de dependências.
+
+## Conclusão
+
+Em conclusão, o NPM é uma ferramenta vital na comunidade de desenvolvimento, oferecendo praticidade, confiabilidade e uma vasta gama de recursos. Este guia visa proporcionar compreensão e interesse.
+
+## Referências
+
+Agradecemos aos canais do YouTube Professor [José de Assis](https://www.youtube.com/@ProfessorJosedeAssis) e [Daniel Berg](https://www.youtube.com/@DanielBergholz) por contribuírem para nosso entendimento sobre o NPM.
+[Documentação NPM](https://docs.npmjs.com/)
+[NPM GitHub](https://github.com/npm/cli)
+[Guia para iniciantes no NPM](https://www.freecodecamp.org/news/a-beginners-guide-to-npm-the-node-package-manager-3503c3dcf2ad/)
+
+
