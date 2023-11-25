@@ -18,6 +18,13 @@ O trabalho de seu grupo deverá ser dividido em duas partes: Roteiro e Apresenta
 
 ## Introdução
 
+
+![540px-Npm-logo svg](https://github.com/thayrelan/Seminarios-Topicos-Desenvolvimento/assets/104568023/6e8959f5-d49a-493f-b9ac-20fb5cb5d872)
+
+
+
+
+
 O NPM foi concebido em 2009 por Isaac Z. Schlueter como uma solução para os desafios enfrentados pelos desenvolvedores na gestão de dependências em projetos JavaScript. Naquela época, a falta de uma ferramenta unificada para gerenciar bibliotecas e módulos tornava a colaboração e a construção de projetos mais complexas.
 
 Isaac criou o NPM para suprir essa lacuna, oferecendo uma maneira eficiente e organizada de compartilhar, instalar e gerenciar dependências em projetos JavaScript. Ao longo dos anos, o NPM evoluiu, tornando-se uma parte essencial do ecossistema JavaScript, utilizado por milhões de desenvolvedores em todo o mundo.
@@ -65,34 +72,37 @@ Para iniciar o uso do NPM, execute o comando "npm init", cujo propósito será d
 
 Demonstrando a utilidade do NPM, a instalação e utilização do pacote "Colors" é exemplificada. Este repositório de códigos validados e documentados ilustra a vasta gama de recursos disponíveis. Adicionalmente, é enfatizado o cuidado ao selecionar pacotes sem documentação.
 
+![Foto Ilustrativa](https://github.com/thayrelan/Seminarios-Topicos-Desenvolvimento/assets/104568023/ab8c9d73-e232-4d2c-b162-9def66859259)
+
+
 Suas principais funcionalidades incluem:
 
 1. Instalação de Pacotes:
-    `-Comando: npm install <nome-do-pacote>`
+    `npm install <nome-do-pacote>`
 
 2. Gestão de Dependências:
-   ` -Comando: npm install`
+   `npm install`
 
 3. Instalação Global de Pacotes:
-  `  -Comando: npm install -g <nome-do-pacote>`
+  `npm install -g <nome-do-pacote>`
 
 4. Criação de um Projeto NPM:
-    `-Comando: npm init`
+    `npm init`
    
 6. Atualização de Pacotes:
-  `  -Comando: npm update <nome-do-pacote>`
+  `npm update <nome-do-pacote>`
 
 7. Remoção de Pacotes:
-  `  -Comando: npm uninstall <nome-do-pacote>`
+  `npm uninstall <nome-do-pacote>`
 
 8. Listagem de Pacotes Instalados:
-   ` -Comando: npm list`
+   `npm list`
 
 9. Pesquisa de Pacotes:
-  `  -Comando: npm search <termo-de-busca>`
+  `npm search <termo-de-busca>`
 
 10. Publicação de Pacotes:
-   ` -Comando: npm publish`
+   `npm publish`
 
 Essas são apenas algumas das funcionalidades do NPM. Ele desempenha um papel crucial na gestão de dependências, automação de tarefas e facilitação do desenvolvimento JavaScript em projetos Node.js e em outras áreas do ecossistema web.
 
@@ -101,15 +111,35 @@ Essas são apenas algumas das funcionalidades do NPM. Ele desempenha um papel cr
 
 Como exemplo prático, considere a criação de um simples site de lista de compras. O pacote "date-fns" é incorporado para facilitar manipulações de datas em JavaScript, exemplificando sua aplicação em registrar o horário de adição de itens à lista.
 
+![Foto Ilustrativa](https://github.com/thayrelan/Seminarios-Topicos-Desenvolvimento/assets/104568023/da83b1fd-a2b8-4e38-8023-37dd4ed732fb)
+
+
+
 ## Ferramentas Similares
 
-Além do NPM, ferramentas como Yarn e pnpm são mencionadas como alternativas. Yarn destaca-se pela rapidez, utilizando um cache local para acelerar as instalações. Por sua vez, o pnpm visa otimizar o espaço em disco ao compartilhar dependências entre projetos, economizando espaço e tempo na instalação.
+Além do NPM, existem outras ferramentas notáveis no ecossistema de gerenciamento de pacotes JavaScript, cada uma oferecendo abordagens únicas para atender às necessidades dos desenvolvedores. Duas dessas ferramentas são Yarn e pnpm.
 
-Essas ferramentas complementares proporcionam escolhas flexíveis para atender às necessidades específicas dos projetos, melhorando eficiência na gestão de dependências.
+1. Yarn:
+   - Rapidez e Eficiência:
+     Yarn é conhecido por sua rapidez e eficiência no gerenciamento de pacotes. Ele utiliza um cache local para armazenar versões baixadas, reduzindo significativamente o tempo necessário para instalar dependências.
+   - Bloqueio de Versões:
+     Yarn introduz a funcionalidade de "yarn.lock", um arquivo de bloqueio que garante a consistência nas versões das dependências entre diferentes ambientes de desenvolvimento.
+
+
+2. pnpm:
+   - Otimização de Espaço em Disco:
+     O pnpm destaca-se pela otimização do uso de espaço em disco. Ao compartilhar dependências entre projetos, ele cria links simbólicos, evitando a duplicação de módulos e economizando espaço.
+   - Velocidade de Instalação:
+     Com sua abordagem inovadora de links simbólicos, o pnpm oferece instalações mais rápidas, especialmente quando várias aplicações compartilham as mesmas dependências.
+     
+
+A escolha entre NPM, Yarn e pnpm geralmente depende das preferências da equipe de desenvolvimento e dos requisitos específicos do projeto. Cada ferramenta oferece seus próprios conjuntos de recursos e vantagens. A flexibilidade de escolher a ferramenta mais adequada para um projeto específico contribui para a eficiência global na gestão de dependências e no desenvolvimento de software.
+
 
 ## Conclusão
 
 Em conclusão, o NPM é uma ferramenta vital na comunidade de desenvolvimento, oferecendo praticidade, confiabilidade e uma vasta gama de recursos. Este guia visa proporcionar compreensão e interesse.
+
 
 ## Referências
 
